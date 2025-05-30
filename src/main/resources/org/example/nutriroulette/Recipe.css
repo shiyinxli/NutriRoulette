@@ -1,0 +1,189 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
+
+/* Root variables for consistent theming */
+.root {
+    -fx-font-family: 'Nunito', sans-serif;
+
+    /* Avocado color palette */
+    -avocado-dark: #2D5016;      /* Dark avocado green for headers */
+    -avocado-medium: #568203;    /* Medium avocado green for buttons */
+    -avocado-light: #8DC63F;     /* Light avocado green for highlights */
+    -avocado-pale: #E8F3D6;      /* Very light avocado tint for backgrounds */
+    -avocado-cream: #FFF9E0;     /* Cream color (avocado flesh) */
+
+    -fx-background-color: -avocado-pale;
+}
+
+/* ScrollPane styling */
+.scroll-pane {
+    -fx-background-color: -avocado-pale;
+    -fx-background-radius: 8px;
+    -fx-padding: 10px;
+}
+
+.scroll-pane > .viewport {
+    -fx-background-color: transparent;
+}
+
+/* ScrollBar styling */
+.scroll-bar:vertical, .scroll-bar:horizontal {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar:vertical .thumb, .scroll-bar:horizontal .thumb {
+    -fx-background-color: -avocado-medium;
+    -fx-background-radius: 5em;
+}
+
+/* VBox and HBox containers */
+.vbox, .hbox {
+    -fx-background-color: transparent;
+    -fx-padding: 10px;
+    -fx-spacing: 10px;
+}
+
+/* Labels styling */
+.label {
+    -fx-font-family: 'Nunito', sans-serif;
+    -fx-text-fill: -avocado-dark;
+    -fx-font-size: 14px;
+}
+
+/* Recipe name styling - larger and bolder */
+#recipeContainer .label:first-child {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -avocado-dark;
+    -fx-padding: 5px 0;
+}
+
+/* Recipe slogan - italicized */
+#recipeContainer .label:nth-child(2) {
+    -fx-font-size: 16px;
+    -fx-font-style: italic;
+    -fx-text-fill: -avocado-medium;
+    -fx-padding: 0 0 10px 0;
+}
+
+/* Section header labels (Ingredients, Instructions) */
+#recipeContainer .label:nth-child(odd):not(:first-child):not(:nth-child(2)) {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -avocado-dark;
+    -fx-padding: 10px 0 5px 0;
+}
+
+/* ComboBox styling */
+.combo-box {
+    -fx-background-color: white;
+    -fx-background-radius: 8px;
+    -fx-border-color: -avocado-medium;
+    -fx-border-radius: 8px;
+    -fx-border-width: 2px;
+    -fx-font-size: 14px;
+    -fx-font-family: 'Nunito', sans-serif;
+}
+
+.combo-box:hover {
+    -fx-border-color: -avocado-dark;
+}
+
+.combo-box .list-cell {
+    -fx-text-fill: -avocado-dark;
+    -fx-background-color: white;
+    -fx-padding: 5px 10px;
+}
+
+.combo-box .list-view {
+    -fx-background-color: white;
+    -fx-background-radius: 5px;
+    -fx-border-color: -avocado-medium;
+    -fx-border-radius: 5px;
+}
+
+.combo-box .arrow {
+    -fx-background-color: -avocado-medium;
+}
+
+/* Button styling */
+.button {
+    -fx-background-color: -avocado-medium;
+    -fx-text-fill: white;
+    -fx-font-family: 'Nunito', sans-serif;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 8px 16px;
+    -fx-background-radius: 20px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 5, 0, 0, 2);
+}
+
+.button:hover {
+    -fx-background-color: -avocado-dark;
+    -fx-cursor: hand;
+}
+
+.button:pressed {
+    -fx-background-color: -avocado-dark;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 2, 0, 0, 1);
+    -fx-translate-y: 1px;
+}
+
+/* List View styling for ingredients */
+.list-view {
+    -fx-background-color: -avocado-cream;
+    -fx-background-radius: 8px;
+    -fx-border-color: -avocado-light;
+    -fx-border-radius: 8px;
+    -fx-border-width: 1px;
+}
+
+.list-view .list-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: -avocado-dark;
+    -fx-font-size: 14px;
+    -fx-padding: 5px 10px;
+}
+
+.list-view .list-cell:odd {
+    -fx-background-color: derive(-avocado-cream, 5%);
+}
+
+.list-view .list-cell:filled:selected {
+    -fx-background-color: -avocado-light;
+    -fx-text-fill: white;
+}
+
+/* Text Area styling for instructions */
+.text-area {
+    -fx-background-color: -avocado-cream;
+    -fx-text-fill: -avocado-dark;
+    -fx-font-size: 14px;
+    -fx-border-color: -avocado-light;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+}
+
+.text-area .content {
+    -fx-background-color: -avocado-cream;
+    -fx-background-radius: 8px;
+}
+
+.text-area:focused .content {
+    -fx-background-color: -avocado-cream;
+}
+
+/* Image styling */
+.image-view {
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0, 0, 3);
+    -fx-background-radius: 10px;
+}
+
+/* Main recipe container */
+#recipeContainer {
+    -fx-background-color: white;
+    -fx-background-radius: 15px;
+    -fx-padding: 20px;
+    -fx-spacing: 10px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 5);
+}

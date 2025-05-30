@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import java.net.URL?>
+<ScrollPane fx:id="scrollpane" fitToWidth="true" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/23.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.nutriroulette.controllers.RecipeController">
+    <stylesheets>
+        <URL value="@Recipe.css"/>
+    </stylesheets>
+    <VBox spacing="10" alignment="TOP_CENTER">
+        <HBox spacing="10" alignment="CENTER">
+            <Label text="Choose Nutrient:" />
+    <ComboBox fx:id="nutrientComboBox"  />
+    <Button fx:id="generateButton"  text="play Roulette" /></HBox>
+    <VBox fx:id="recipeContainer" spacing="10" maxWidth="600" alignment="CENTER" /></VBox>
+</ScrollPane>

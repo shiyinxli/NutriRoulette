@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
+
+/* Root variables for consistent theming */
+.root {
+    -fx-font-family: 'Nunito', sans-serif;
+
+    /* Avocado color palette */
+    -avocado-dark: #2D5016;      /* Dark avocado green for headers */
+    -avocado-medium: #568203;    /* Medium avocado green for buttons */
+    -avocado-light: #8DC63F;     /* Light avocado green for highlights */
+    -avocado-pale: #E8F3D6;      /* Very light avocado tint for backgrounds */
+    -avocado-cream: #FFF9E0;     /* Cream color (avocado flesh) */
+
+    -fx-background-color: -avocado-pale;
+}
+
+
+/* VBox and HBox containers */
+.vbox {
+    -fx-background-color: -avocado-pale;
+    -fx-padding: 10px;
+    -fx-spacing: 10px;
+}
+
+/* Labels styling */
+.label {
+    -fx-font-family: 'Nunito', sans-serif;
+    -fx-text-fill: -avocado-dark;
+    -fx-font-size: 24px;
+}
+
+
+/* Button styling */
+.button {
+    -fx-background-color: -avocado-medium;
+    -fx-text-fill: white;
+    -fx-font-family: 'Nunito', sans-serif;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 8px 16px;
+    -fx-background-radius: 20px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 5, 0, 0, 2);
+}
+
+.button:hover {
+    -fx-background-color: -avocado-dark;
+    -fx-cursor: hand;
+}
+
+.button:pressed {
+    -fx-background-color: -avocado-dark;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 2, 0, 0, 1);
+    -fx-translate-y: 1px;
+}
+
