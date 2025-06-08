@@ -16,6 +16,7 @@ public class RecipeController {
     @FXML private ComboBox<String> nutrientComboBox;
     @FXML private Button generateButton;
     @FXML private VBox recipeContainer;
+    @FXML private Button sortButton;
 
     private final Random random = new Random();
 
@@ -24,7 +25,7 @@ public class RecipeController {
 
     @FXML
     public void initialize() {
-        // Fixed nutrients
+
         nutrientComboBox.getItems().addAll("Iodine", "Iron", "Vitamin C");
         nutrientComboBox.setStyle("-fx-font-size: 14px;");
 
@@ -32,6 +33,16 @@ public class RecipeController {
         generateButton.setOnAction(e -> {
             String selected = nutrientComboBox.getValue();
             if (selected != null) showRandomRecipe(selected);
+        });
+
+        sortButton.setOnAction(e->{
+            recipeContainer.getChildren().clear();
+            Collections.sort(allRecipes);
+            for(Recipe recipe: allRecipes){
+                Hyperlink recipelink = new Hyperlink(recipe.toString());
+                recipelink.setOnAction(a->displayRecipe(recipe));
+                recipeContainer.getChildren().add(recipelink);
+            }
         });
     }
 
@@ -54,12 +65,13 @@ public class RecipeController {
     }
 
     private void displayRecipe(Recipe recipe) {
+        recipeContainer.getChildren().clear();
         Label name = new Label(recipe.getName());
         name.setStyle("-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #333;");
 
 //        name.setStyle("-fx-font-size: 18px; -fx-font-weight: bold;");
         Label slogan = new Label(recipe.getSlogan());
-        name.setStyle("-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #333;");
+//        name.setStyle("-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #333;");
 
         ListView<String> ingredients = new ListView<>();
         ingredients.getItems().addAll(recipe.getIngredients());
