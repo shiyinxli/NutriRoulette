@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
 
-/* Root variables for consistent theming */
 .root {
     -fx-font-family: 'Nunito', sans-serif;
 
@@ -15,14 +14,12 @@
 }
 
 
-/* VBox and HBox containers */
 .vbox {
     -fx-background-color: -avocado-pale;
     -fx-padding: 10px;
     -fx-spacing: 10px;
 }
 
-/* Labels styling */
 .label {
     -fx-font-family: 'Nunito', sans-serif;
     -fx-text-fill: -avocado-dark;
@@ -30,7 +27,6 @@
 }
 
 
-/* Button styling */
 .button {
     -fx-background-color: -avocado-medium;
     -fx-text-fill: white;
@@ -39,8 +35,7 @@
     -fx-font-weight: bold;
     -fx-padding: 8px 16px;
     -fx-background-radius: 20px;
-    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 5, 0, 0, 2);
-}
+    }
 
 .button:hover {
     -fx-background-color: -avocado-dark;
@@ -49,7 +44,5 @@
 
 .button:pressed {
     -fx-background-color: -avocado-dark;
-    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 2, 0, 0, 1);
-    -fx-translate-y: 1px;
 }
 

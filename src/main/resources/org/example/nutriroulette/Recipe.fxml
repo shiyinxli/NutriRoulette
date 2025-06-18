@@ -14,6 +14,7 @@
     <ComboBox fx:id="nutrientComboBox"  />
     <Button fx:id="generateButton"  text="play Roulette" />
         <Button fx:id="sortButton" text="sort by difficulty"/>
+            <Button fx:id="saveButton" text="save"/>
         </HBox>
     <VBox fx:id="recipeContainer" spacing="10" maxWidth="600" alignment="CENTER" /></VBox>
 </ScrollPane>

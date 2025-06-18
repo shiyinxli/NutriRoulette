@@ -9,4 +9,5 @@ module org.example.nutriroulette {
 
     opens org.example.nutriroulette.controllers to javafx.fxml;
     exports org.example.nutriroulette;
+    exports org.example.nutriroulette.recipe;
 }

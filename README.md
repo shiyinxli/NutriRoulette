@@ -11,6 +11,7 @@ your needs!
 <img src="/screenshots/screenshot1.png" height="400"/>
 <img src="/screenshots/screenshot2.png" height="400"/>
 <img src="/screenshots/screenshot3.png" height="400"/>
+<img src="screenshots/screenshot7.png" height="400"/>
 <img src="/screenshots/screenshot4.png" height="400"/>
 <img src="/screenshots/screenshot5.png" height="400"/>
 <img src="/screenshots/screenshot6.png" height="400"/>
